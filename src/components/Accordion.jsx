@@ -8,7 +8,7 @@ const Accordion=({items})=>{
     const handlecuritem=(index)=>{
         setOpenItem(openItem==index ?null : index);
     }
-    return(
+    return(!items || items.length==0 ? "No Items Available" :
         <div className="accordion">
             {
                 items.map((item,index)=>{
